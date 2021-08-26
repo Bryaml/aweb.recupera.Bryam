@@ -63,15 +63,16 @@ btnCambiar.addEventListener("click", ()=>{
 ); 
 
 function limpiar() {
+    document.getElementById("titulo").innerHTML="";
+    document.getElementById("cedulas").innerHTML="";
+    document.getElementById("nombre-paciente").innerHTML="";
+    document.getElementById("fechat").innerHTML="";
+    document.getElementById("total").innerHTML=""; 
+    document.getElementById("descrip").innerHTML=""; 
 
      
 
-    document.getElementById("titulo").reset();
-    document.getElementById("cedulas").reset();
-    document.getElementById("nombre-paciente").reset();
-    document.getElementById("fechat").reset();
-    document.getElementById("total").reset(); 
-    document.getElementById("descrip").reset(); 
+   
   
   
 }
