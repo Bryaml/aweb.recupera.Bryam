@@ -16,7 +16,9 @@ var recupera ={
     recupera.fechareceta=document.getElementById("fechareceta").value;
     recupera.fechaexp=document.getElementById("fechaexp").value;
     recupera.medicamentosentre=document.getElementById("medicamentosentre").value;
-     
+    
+    recupera.alertwarning= document.createElement("div")
+ 
  
 
     actualizarFicha();
@@ -31,9 +33,18 @@ function actualizarFicha(){
     document.getElementById("fechat").innerHTML=recupera.fechareceta;
     document.getElementById("total").innerHTML=recupera.fechaexp; 
     document.getElementById("descrip").innerHTML=recupera.medicamentosentre; 
+    
+    
+    document.getElementById("medico").value= "";
+    document.getElementById("cedulaprofe").value="";
+    document.getElementById("paciente").value="";
+    document.getElementById("fechareceta").value="";
+    document.getElementById("fechaexp").value="";
+    document.getElementById("medicamentosentre").value="";
 
- 
-   
+    alertwarning.setAttribute("class", "alert alert-warning");
+    
+  
  
     
 }
@@ -52,12 +63,16 @@ btnCambiar.addEventListener("click", ()=>{
 ); 
 
 function limpiar() {
+
+     
+
+    document.getElementById("titulo").reset();
+    document.getElementById("cedulas").reset();
+    document.getElementById("nombre-paciente").reset();
+    document.getElementById("fechat").reset();
+    document.getElementById("total").reset(); 
+    document.getElementById("descrip").reset(); 
   
-  document.getElementById("medico").value = "";
-  document.getElementById("cedulaprofe").value="";
-  document.getElementById("paciente").value="";
-  document.getElementById("fechareceta").value="";
-  document.getElementById("fechaexp").value="";
-  document.getElementById("medicamentosentre").value="";
+  
 }
 
